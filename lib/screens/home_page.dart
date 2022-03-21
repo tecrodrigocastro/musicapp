@@ -4,6 +4,7 @@ import 'package:orbe_music/widgets/favorite_artist.dart';
 import 'package:orbe_music/widgets/last_play.dart';
 import 'package:orbe_music/widgets/made_for_you.dart';
 import 'package:orbe_music/widgets/nav_bar.dart';
+import 'package:orbe_music/widgets/tips.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -103,8 +104,8 @@ class HomePage extends StatelessWidget {
                       "images/pop.jpg",
                       "images/rock.jpg",
                       "images/rap.jpg",
-                      "Discover Weekly",
-                      "Your weekly mixtape of fresh music.Enjoy ne..."),
+                      "Party hits",
+                      "A mix of the biggest pop,dence, and hip hop..."),
                   SizedBox(
                     width: 10,
                   ),
@@ -188,7 +189,30 @@ class HomePage extends StatelessWidget {
                 madeYou(context, "Pop"),
                 madeYou(context, "Classic"),
               ],
-            )
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            const Text(
+              "Tips to get started",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 10),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  tips(context, Colors.orange),
+                  SizedBox(width: 10),
+                  tips(context, Colors.blue),
+                  SizedBox(width: 10),
+                  tips(context, Colors.red),
+                ],
+              ),
+            ),
           ],
         ),
       ),
