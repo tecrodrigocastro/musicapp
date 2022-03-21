@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:orbe_music/utils/color.dart';
 import 'package:orbe_music/widgets/nav_bar.dart';
+import 'package:orbe_music/widgets/top_genres.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({Key? key}) : super(key: key);
@@ -54,7 +55,7 @@ class SearchScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 50),
+            SizedBox(height: 45),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -67,7 +68,7 @@ class SearchScreen extends StatelessWidget {
                   ),
                   child: Icon(
                     Icons.mic_none,
-                    color: Colors.orange,
+                    color: Colors.orange[900],
                     size: 50,
                   ),
                 ),
@@ -79,11 +80,11 @@ class SearchScreen extends StatelessWidget {
               children: [
                 Text(
                   "Find Song",
-                  style: TextStyle(color: Colors.white, fontSize: 25),
+                  style: TextStyle(color: Colors.white, fontSize: 20),
                 ),
               ],
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 30),
             Container(
               height: 55,
               width: MediaQuery.of(context).size.width,
@@ -116,6 +117,59 @@ class SearchScreen extends StatelessWidget {
                   fontSize: 23,
                   fontWeight: FontWeight.bold),
             ),
+            SizedBox(height: 10),
+            Row(
+              children: [
+                Expanded(
+                  child: topGenresCard(context, "Pop", Colors.pink.shade700,
+                      "images/taylor.jpg"),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Expanded(
+                  child: topGenresCard(
+                      context, "Rap", Colors.orange.shade700, "images/rap.jpg"),
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
+            Row(
+              children: [
+                Expanded(
+                  child: topGenresCard(context, "Hard Rock",
+                      Colors.blue.shade700, "images/rock.jpg"),
+                ),
+                SizedBox(width: 10),
+                Expanded(
+                  child: topGenresCard(context, "Hip Hop",
+                      Colors.green.shade700, "images/mano.jpg"),
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
+            Row(
+              children: [
+                Expanded(
+                  child: topGenresCard(context, "Classic",
+                      Colors.purple.shade700, "images/classica.jpg"),
+                ),
+                SizedBox(width: 10),
+                Expanded(
+                  child: topGenresCard(context, "Reggae", Colors.red.shade700,
+                      "images/bob.jpeg"),
+                ),
+              ],
+            ),
+            SizedBox(height: 10),
+            Text(
+              "Browse all",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 23,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 10),
           ],
         ),
       ),
