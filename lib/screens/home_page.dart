@@ -50,6 +50,7 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             buildNavNarItem(
+                context,
                 "Home",
                 Icon(
                   Icons.home,
@@ -57,6 +58,7 @@ class HomePage extends StatelessWidget {
                 ),
                 0),
             buildNavNarItem(
+                context,
                 "Search",
                 Icon(
                   Icons.search,
@@ -64,6 +66,7 @@ class HomePage extends StatelessWidget {
                 ),
                 1),
             buildNavNarItem(
+                context,
                 "Library",
                 Icon(
                   Icons.library_music,
@@ -71,6 +74,7 @@ class HomePage extends StatelessWidget {
                 ),
                 2),
             buildNavNarItem(
+                context,
                 "Profile",
                 Icon(
                   Icons.person,

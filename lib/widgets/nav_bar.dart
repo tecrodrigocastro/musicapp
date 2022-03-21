@@ -1,13 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:orbe_music/screens/home_page.dart';
+import 'package:orbe_music/screens/search_screen.dart';
 import 'package:orbe_music/utils/color.dart';
+
 Widget buildNavNarItem(
+  context,
   String name,
   Icon icone,
   int index,
 ) {
   return GestureDetector(
     onTap: () {
-      print(index);
+      switch (index) {
+        case 1:
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => SearchScreen()));
+          break;
+        default:
+      }
     },
     child: Container(
       height: 60,
