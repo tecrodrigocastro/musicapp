@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:orbe_music/utils/color.dart';
+import 'package:orbe_music/widgets/browse_all.dart';
 import 'package:orbe_music/widgets/nav_bar.dart';
 import 'package:orbe_music/widgets/top_genres.dart';
 
@@ -170,6 +171,33 @@ class SearchScreen extends StatelessWidget {
                   fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 10),
+            Row(
+              children: [
+                Expanded(
+                  child: browserAll(context, "Podcast", "images/Podcast.jpg"),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Expanded(
+                  child: browserAll(context, "Rádio", "images/radio.jpg"),
+                ),
+              ],
+            ),
+            SizedBox(height: 10),
+            Row(
+              children: [
+                Expanded(
+                  child: browserAll(context, "Podcast", "images/Podcast.jpg"),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Expanded(
+                  child: browserAll(context, "Car music", "images/car.jpg"),
+                ),
+              ],
+            ),
           ],
         ),
       ),
