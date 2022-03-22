@@ -150,19 +150,19 @@ class HomePage extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  favoriteArtist("images/drake.jpg"),
+                  favoriteArtist("images/drake.jpg",context),
                   SizedBox(
                     width: 15,
                   ),
-                  favoriteArtist("images/mano.jpg"),
+                  favoriteArtist("images/mano.jpg",context),
                   SizedBox(
                     width: 15,
                   ),
-                  favoriteArtist("images/taylor.jpg"),
+                  favoriteArtist("images/taylor.jpg",context),
                   SizedBox(
                     width: 15,
                   ),
-                  favoriteArtist("images/michael.jpeg")
+                  favoriteArtist("images/michael.jpeg",context)
                 ],
               ),
             ),
