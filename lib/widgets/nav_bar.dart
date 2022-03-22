@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:orbe_music/screens/home_page.dart';
+import 'package:orbe_music/screens/library_screen.dart';
 import 'package:orbe_music/screens/search_screen.dart';
 import 'package:orbe_music/utils/color.dart';
 
@@ -12,9 +13,17 @@ Widget buildNavNarItem(
   return GestureDetector(
     onTap: () {
       switch (index) {
+        case 0:
+          Navigator.pushReplacement(
+              context, MaterialPageRoute(builder: (context) => HomePage()));
+          break;
         case 1:
-          Navigator.push(
+          Navigator.pushReplacement(
               context, MaterialPageRoute(builder: (context) => SearchScreen()));
+          break;
+        case 2:
+          Navigator.pushReplacement(context,
+              MaterialPageRoute(builder: (context) => LibraryScreen()));
           break;
         default:
       }
