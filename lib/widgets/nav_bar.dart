@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:orbe_music/screens/home_page.dart';
 import 'package:orbe_music/screens/library_screen.dart';
+import 'package:orbe_music/screens/profile_screen.dart';
 import 'package:orbe_music/screens/search_screen.dart';
 import 'package:orbe_music/utils/color.dart';
 
@@ -24,6 +25,10 @@ Widget buildNavNarItem(
         case 2:
           Navigator.pushReplacement(context,
               MaterialPageRoute(builder: (context) => LibraryScreen()));
+          break;
+        case 3:
+          Navigator.pushReplacement(context,
+              MaterialPageRoute(builder: (context) =>ProfileScreen()));
           break;
         default:
       }
